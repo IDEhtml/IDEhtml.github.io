@@ -1,0 +1,354 @@
+*{
+    box-sizing: border-box;
+}
+.CodeMirror{
+    border: 1px solid #ccc;
+    z-index: 0;
+    min-height: 200px;
+    height: 100% !important;
+    width: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+input, textarea{
+    width: 100%;
+}
+input[type="radio"]~div{
+    display: none;
+}
+input[type="radio"]:checked~div{
+    display: block;
+    padding: 5px;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.item-disable{
+    pointer-events: none;
+    color: #cbcbcb;
+}
+*[hidden], .hidden{
+    display: none !important;
+}
+.scripts-panel > div{
+    display: flex;
+}
+.scripts-panel > div > div{
+    width: 100%;
+    max-height: 220px;
+    position: relative;
+}
+#app-editor{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#ed-container{
+    height: 100%;
+    overflow: auto;
+}
+.code-editor-header{
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
+    display: block !important;
+}
+.code-editor-body > div > .todo-list-container{
+    position: absolute;
+    right: 4px;
+    top: 1px;
+    padding: 4px;
+    z-index: 1;
+    text-align: right;
+    user-select: none;
+}
+.todo-list-container .todo-list{
+    display: none;
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+.todo-list-container:hover .todo-list{
+    display: block;
+}
+.todo-list-add{
+    cursor: pointer;
+    font-weight: bold;
+}
+.todo-item{
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 3px;
+    margin: 1px;
+    border-radius: 3px;
+}
+.todo-item input{
+    border: none;
+}
+.todo-item label{
+    background: red;
+    padding: 0px 5px;
+    color: #fff;
+    border-radius: 100%;
+    line-height: 15px;
+    cursor: pointer;
+}
+
+#ed-container{
+    display: flex;
+}
+#ed-container-design{
+    width: 100%;
+}
+
+#ed-container-design{
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+#ed-container-status ~ div{
+    display: flex;
+}
+#ed-container-status ~ div > section{
+    display: flex;
+}
+#ed-container-status ~ div > section > section{
+    position: relative;
+    width: 30px;
+    cursor: pointer;
+    background: #13b3a1;
+    color: #fff;
+    font-weight: bold;
+}
+#ed-container-status ~ div > section > section > div{
+    top: 50%;
+    right: 50%;
+    position: absolute;
+    transform: scale(-1) translate(-50%, 50%);
+    writing-mode: vertical-lr;
+}
+#ed-container-status ~ div > *{
+    width: 100%;
+    overflow: auto;
+}
+.dev-mode ~ div > div{
+    padding: 10px !important;
+}
+.dev-mode ~ div > div, .dev-mode ~ div > div *{
+    position: relative;
+}
+.dev-mode ~ div > div *:hover{
+    border: 1px solid green;
+}
+.dev-mode ~ div > div *[active]{
+    border: 1px solid red;
+}
+.dev-mode ~ div > div *{
+    padding: 11px;
+    border: 1px dotted #ccc;
+}
+.dev-mode ~ div > div *::before {
+    content: attr(id);
+    font-size: 10px;
+    position: absolute;
+    cursor: pointer;
+    float: inline-end;
+/*    transform: translate(0px, -7px);*/
+    transform: translate(0px, -20px);
+    background: #fff;
+}
+.dev-mode ~ div > div *[active]::before{
+    color: red;
+    font-weight: bold;
+}
+.dev-mode ~ div > div *::before{
+    transform: translate(0px, -20px);
+}
+.dev-mode ~ div > div *:hover{
+    border: 1px solid green;
+}
+.dev-mode ~ div > div *[active]{ 
+    padding: 11px;
+    border: 1px solid red;
+}
+
+#eo-container > div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #4b4b4b;
+}
+#eo-container table{
+    width: 100%;
+    margin-bottom: 10px;
+}
+#eo-container th{
+    text-align: left;
+    color: #13b3a1;
+    font-weight: bold;
+}
+#eo-container label{
+    margin-left: .2rem;
+}
+#eo-container input{
+   height: 26px
+}
+#eo-container input, select, textarea{
+    color: #1da196;
+    font-weight: bold;
+    border: 1px solid #fff;
+/*    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;*/
+    border: 1px solid;
+    outline: none;
+    padding: 6px;
+    border-radius: 4px;
+}
+*[s_active], .option-list *[active]{
+    background: #e3e3e3;
+    font-weight: bold;
+    color: #048485;
+}
+.option-list *{
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 20px;
+    text-align: center;
+}
+#eo-container{
+    max-width: 220px;
+    min-width: 220px;
+}
+#ed-container-design > div{
+    height: 100%;
+    overflow: auto;
+}
+.tab-items{
+    background: #13b3a1;
+    color: #fff;
+    padding: 4px;
+}
+.tab-items label{
+    display: inline-block;
+    margin: 2px;
+    transform: translate(0px, 6px);
+    padding: 5px;
+}
+.tab-items label:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+.tab-items label[active]{
+    background: #fff;
+    color: red;
+    font-weight: bold;
+}
+.tab-items ~ div{
+    height: 100%;
+    display: contents;
+}
+
+#ed-container-status, .code-editor-header{
+    user-select: none;
+    min-height: 20px;
+    height: auto !important;
+    background: #13b3a1;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    font-weight: bold;
+}
+#ed-container-status b{
+    text-transform: uppercase;
+    color: red;
+    color: #a7ffec;
+}
+#ed-container-status .status{
+    align-self: flex-end;
+    font-size: 11px;
+    font-weight: 100;
+/*    width: 122px;*/
+    text-align: right;
+}
+#ed-container-status .context-menu{
+    background: #fff;
+    color: #000;
+    padding: 4px;
+}
+.context-menu:hover .context-menu-container{
+    display: block;
+}
+.context-menu .context-menu-container{
+    position: absolute;
+    background: #fff;
+    padding: 10px;
+    color: #000;
+    display: none;
+}
+
+.context-menu .context-menu-container *{
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    margin: 1px;
+    cursor: pointer;
+}
+.context-menu .context-menu-container *:hover{
+    color: red;
+}
+
+.context-menu .active{
+    display: block;
+}
+.method-items{
+    display: flex;
+    text-align: center;
+    position: relative;
+    top: -3px;
+}
+.method-items label{
+    margin: 0px 4px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    line-height: 18px;
+}
+.method-items label > label:hover{
+    color: red;
+}
+.method-items label > label{
+    display: block;
+    font-size: 11px;
+    font-weight: 100;
+    position: relative;
+    bottom: 4px;
+    height: 3px;
+    color: #fdfdfd;
+}
+
+.ui-isearch {
+    position: relative;
+}
+.ui-isearch label{
+    position: absolute;
+    right: 7px;
+    top: 2px;
+    cursor: pointer;
+}
+.ui-isearch .option-list{
+    position: absolute;
+    background: #f1f1f1;
+    z-index: 1;
+}
+.ui-isearch .option-list div{
+    background: #fff;
+}
+.ui-isearch input:focus ~ .option-list, .option-list:hover{
+    display: block !important;
+}

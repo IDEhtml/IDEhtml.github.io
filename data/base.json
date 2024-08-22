@@ -1,0 +1,1 @@
+{"html":"<div><div class=\"flex flex-c _w _h\" active=\"1\"></div></div>","css":"*{\n\tbox-sizing:border-box;\n}\nbody{\n\tmargin:0;\n}\n.flex{\n\tdisplay:flex;\n}\n.flex-c{\n\tflex-direction:column;\n}\n.w{\n\twidth:100%;\n}\n._w{\n\twidth:100vw;\n}\n.h{\n\theight:100%;\n}\n._h{\n\theight:100vh;\n}\n","js":"","links":[{},{}]}
